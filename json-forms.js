@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2021, PockelHockel.
+ * This software is licensed under the GNU General Public License v3.0
+ */
+
 Array.prototype.forEach.call(document.forms, function (form) {
     form.onsubmit = async (e) => {
         e.preventDefault();
