@@ -1,5 +1,5 @@
 Array.prototype.forEach.call(document.forms, function (form) {
-    form.onsubmit = async function (e) {
+    form.onsubmit = async (e) => {
         e.preventDefault();
 
         const jsonData = buildJsonFromForm(form);
@@ -17,17 +17,15 @@ Array.prototype.forEach.call(document.forms, function (form) {
 
 function buildJsonFromForm(form) {
     const jsonData = {};
-    Array.prototype.forEach.call(form.elements, function (el) {
-        if (el instanceof HTMLInputElement && el.type !== 'submit' && el.type !== 'button' && el.type !== 'reset') {
+    Array.prototype.forEach.call(form.elements, (el) => {
+        if (el instanceof HTMLInputElement && !['submit', 'button', 'reset'].includes(el.type)) {
             if (el.type === 'checkbox' || el.type === 'radio') {
                 jsonData[el.name] = el.checked;
-            }
-            else {
-                if (typeof el.value === 'string' && isNaN(el.value)) {
-                    jsonData[el.name] = el.value;
-                }
-                else {
+            } else {
+                if (['number', 'range'].includes(el.type) && !isNaN(el.value)) {
                     jsonData[el.name] = parseInt(el.value);
+                } else {
+                    jsonData[el.name] = el.value;
                 }
             }
         }
