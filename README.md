@@ -39,3 +39,6 @@ It needs to be added at **the end of the DOM** to detect all forms.
 </body>
 </html>
 ```
+***
+This software is licensed under the `GNU General Public License v3.0`.  
+So please make your software open-source too!
