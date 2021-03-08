@@ -35,7 +35,7 @@ It needs to be added at **the end of the DOM** to detect all forms.
     <br>
     <input type="submit" value="Submit">
 </form>
-<script src="https://raw.githubusercontent.com/PockelHockel/json-html-forms/master/json-forms.js"></script>
+<script src="https://raw.githubusercontent.com/lennartkloock/json-html-forms/master/json-forms.js"></script>
 </body>
 </html>
 ```
