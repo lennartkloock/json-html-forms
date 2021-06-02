@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021, PockelHockel.
+ * Copyright (c) 2021, Lennart Kloock.
  * This software is licensed under the GNU General Public License v3.0
  */
 
